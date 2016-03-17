@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#div1{height:200px;width: 200px;background-color: red;position: absolute;left: -200px;}
+		#div1 span{height: 30px;width: 30px; background-color: blue;position: absolute;left: 200px;top: 75px;}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<span id="share"></span>
+	</div>
+
+	<script type="text/javascript">
+		var oDiv = document.getElementById('div1');
+		oDiv.onmouseover = function(){
+			startMove(0);
+		}
+		oDiv.onmouseout = function(){
+			startMove(-200);
+		}
+		var timer =null;
+		function startMove(iTarget){
+			clearInterval(timer);	
+			var oDiv = document.getElementById('div1');
+			timer = setInterval(function(){
+				var speed = 0;
+				(oDiv.offsetLeft>iTarget)?speed=-10:speed=10;
+				if(oDiv.offsetLeft == iTarget){
+					clearInterval(timer);
+				}else{
+					oDiv.style.left = oDiv.offsetLeft +speed+'px';
+				}
+			},30);
+		}
+	</script>
+</body>
+</html>
