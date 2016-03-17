@@ -7,6 +7,10 @@ Test page: http://jirongsay.com/shared/projet-js/mini-projet-js-2015.html
 
 2. widget
 This is a part of learning widget. Four popup buttons are created to test.
-Courses: http://www.imooc.com/learn/99
+Courses: http://www.imooc.com/learn/99 from Adang
 Test page: http://jirongsay.com/shared/zujian/
+
+3. simple_animation
+A part of js animation.
+Course: http://www.imooc.com/learn/167 from vivian
 
